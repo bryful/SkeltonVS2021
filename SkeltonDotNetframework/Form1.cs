@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+using System.Text.Json;
 using BRY;
 
 /// <summary>
@@ -129,12 +130,10 @@ namespace SkeltonDotNetframework
 
 		private void button1_Click_1(object sender, EventArgs e)
 		{
-			PrefFile pf = new PrefFile();
+			RenbanName rn = new RenbanName("AAA0001.tga");
 
-			pf.SetColor("c", Color.FromArgb(255,128,128,74));
+			MessageBox.Show(rn.ToJson());
 
-			string js = pf.ToJson();
-			MessageBox.Show(js);
 
 		}
 
